@@ -1,5 +1,7 @@
 " MdToc
 
+command! MdToc call s:toc()
+
 function! s:rightPad(str, count)
     return a:str . repeat(' ', a:count - len(a:str))
 endfunction
@@ -49,6 +51,3 @@ function! s:toc()
     set nomodified
 endfunction
 
-function mdtoc#load()
-    command! MdToc call s:toc()
-endfunction
